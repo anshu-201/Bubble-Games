@@ -1,0 +1,125 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Gilroy", sans-serif;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+#main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(174, 230, 174);
+    padding: 10px;
+}
+
+#panel {
+    overflow: hidden;
+    width: 90%;
+    max-width: 800px;
+    height: 90%;
+    border-radius: 10px;
+    background-color: aliceblue;
+}
+
+#ptop {
+    padding: 10px 5%;
+    justify-content: space-between;
+    display: flex;
+    color: #fff;
+    align-items: center;
+    width: 100%;
+    height: 80px;
+    background-color: rgb(14, 50, 14);
+    flex-wrap: wrap; /* Ensures content wraps on smaller screens */
+}
+
+.elem {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex: 1; /* Adjusts width dynamically */
+    justify-content: center;
+}
+
+.elem h2 {
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.box {
+    color: rgb(58, 143, 58);
+    font-weight: 600;
+    font-size: 20px;
+    padding: 5px 15px;
+    background-color: #fff;
+    border-radius: 5px;
+    text-align: center;
+}
+
+#pbtm {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 20px;
+    width: 100%;
+    height: calc(100% - 80px);
+    overflow-y: auto; /* Adds scroll for overflow content */
+}
+
+.bubble {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    width: 50px;
+    background-color: rgb(125, 165, 120);
+    color: #fff;
+    border-radius: 50%;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.bubble:hover {
+    background-color: rgb(58, 143, 58);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #ptop {
+        flex-direction: column; /* Stacks items vertically */
+        height: auto;
+        padding: 10px;
+    }
+
+    .elem {
+        margin-bottom: 10px;
+    }
+
+    .bubble {
+        height: 40px;
+        width: 40px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    #panel {
+        height: 95%;
+    }
+
+    .bubble {
+        height: 30px;
+        width: 30px;
+        font-size: 12px;
+    }
+}
